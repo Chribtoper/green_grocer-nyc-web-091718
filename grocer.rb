@@ -37,8 +37,8 @@ def apply_coupons(cart, coupons)
   hash
 end
 
-def apply_clearance(cart)
-  puts cart 
+def apply_clearance(cart:[])
+  puts cart
 end
 
 def checkout(cart, coupons)
