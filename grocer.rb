@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
   hash
 end
 
-def apply_clearance(cart:[])
+def apply_clearance(cart)
   cart.each do |product, attribute|
     if attribute[:clearance] == true
       math = 0.8
