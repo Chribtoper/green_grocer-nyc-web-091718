@@ -22,7 +22,7 @@ hash = {} #result
         if hash["#{product} W/COUPON"]
           result["#{product} W/COUPON"][:count] += 1
         else
-          result["#{product} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
+          result["#{product} W/COUPON"] = {:price => coupon[:cost], :clearance => data[:clearance], :count => 1}
         end
       end
     end
