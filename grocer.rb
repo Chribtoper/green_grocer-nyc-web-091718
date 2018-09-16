@@ -3,7 +3,7 @@ hash = {}
   cart.each do |item, data|
     data.each do |attribute, value|
       if hash[attribute].nil?
-        attribute[:count] = 1
+        hash[attribute][:count] = 1
       else
         attribute[:count] += 1
       end
