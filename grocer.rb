@@ -9,7 +9,6 @@ hash = {}
         hash[product][:count] += 1
       end
     end
-  hash
   end
 end
 
