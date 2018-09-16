@@ -7,8 +7,10 @@ hash = {}
       else
         hash[product] = data
         hash[product][:count] = 1
+      end
     end
   end
+  hash
 end
 
 end
