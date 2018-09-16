@@ -20,11 +20,11 @@ c_val = coupons[:cost]
   cart.each do |product, data|
     hash[product] = data
     if product == coupons[:item]
-      hash[product][:count] -= c_num.to_int
+      hash[product][:count] -= c_num.to_i
       coupon = "#{product} W/COUPON"
-      hash[coupon][:price] = c_val.to_int
+      hash[coupon][:price] = c_val.to_i
       hash[coupon][:clearance] = true
-      hash[coupon][:count] = c_num.to_int
+      hash[coupon][:count] = c_num.to_i
     end
   end
   hash
