@@ -10,8 +10,7 @@ hash = {}
       end
     end
   hash
-end
-
+  end
 end
 
 def apply_coupons(cart, coupons)
