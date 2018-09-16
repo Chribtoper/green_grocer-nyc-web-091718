@@ -18,11 +18,11 @@ hash = {}
   cart.each do |product, data|
     hash[product] = data
     if product == coupons[:item]
-      hash[product][:count] -= coupons[:num]
+      hash[product][:count] -= coupons[:num].to_i
       coupon = "#{product} W/COUPON"
-      hash[coupon][:price] = coupons[:cost]
+      hash[coupon][:price] = coupons[:cost].to_i
       hash[coupon][:clearance] = true
-      hash[coupon][:count] = coupons[:num]
+      hash[coupon][:count] = coupons[:num].to_i
     end
   end
   hash
