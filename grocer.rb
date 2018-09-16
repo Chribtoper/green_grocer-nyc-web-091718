@@ -13,22 +13,23 @@ hash = {}
   hash
 end
 
-def apply_coupons(cart, coupons)
-hash = {}
-c_num = coupons[:num]
-c_val = coupons[:cost]
-  cart.each do |product, data|
-    hash[product] = data
-    if product == coupons[:item]
-      hash[product][:count] -= c_num.to_i
-      coupon = "#{product} W/COUPON"
-      hash[coupon][:price] = c_val.to_i
-      hash[coupon][:clearance] = true
-      hash[coupon][:count] = c_num.to_i
+def apply_coupons(cart:[], coupons:[])
+hash = {} #result 
+  cart.each do |product, data| #food, info 
+    coupons.each do |coupon|
+      if food == coupon[:item] && info[:count] >= coupon[:num]
+        info[:count] =  info[:count] - coupon[:num]
+        if result["#{food} W/COUPON"]
+          result["#{food} W/COUPON"][:count] += 1
+        else
+          result["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
+        end
+      end
     end
+    result[food] = info
   end
-  hash
-end
+  result
+end	end
 
 def apply_clearance(cart)
   # code here
