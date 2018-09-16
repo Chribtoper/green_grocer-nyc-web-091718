@@ -18,7 +18,7 @@ hash = {}
   cart.each do |product, data|
     hash[product] = data
     if product == coupons[:item]
-      hash[product][:count] -= data[:num]
+      hash[product][:count] -= coupons[:num]
     end
   end
 end
