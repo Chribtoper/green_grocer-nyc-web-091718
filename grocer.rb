@@ -6,6 +6,7 @@ hash = {}
         hash[product][:count] += 1
       else
         hash[product] = data
+        hash[product][:count] = 1
     end
   end
 end
