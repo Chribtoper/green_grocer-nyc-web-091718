@@ -15,6 +15,8 @@ end
 
 def apply_coupons(cart, coupons)
 hash = {}
+c_num = coupons[:num]
+c_val = coupons[:cost]
   cart.each do |product, data|
     hash[product] = data
     if product == coupons[:item]
