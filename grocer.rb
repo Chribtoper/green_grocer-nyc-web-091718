@@ -1,8 +1,13 @@
 def consolidate_cart(cart)
 hash = {}
-cart.each_with_index do |item, i|
-end
-puts cart.flatten
+  cart.each_with_index do |item, i|
+    item.each do |product, data|
+      if hash[product].nil?
+        hash[product][:count] += 1
+      else
+        hash[product] = data
+    end
+  end
 end
 
 end
