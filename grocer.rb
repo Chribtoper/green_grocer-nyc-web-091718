@@ -3,6 +3,7 @@ hash = {}
   cart.each do |item, data|
     hash = data
   end
+  puts hash
 end
 
 def apply_coupons(cart, coupons)
