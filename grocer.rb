@@ -1,5 +1,13 @@
 def consolidate_cart(cart)
-  puts cart
+  cart.collect do |item, data|
+    data.collect do |attribute, value|
+      if attribute[:count].nil?
+        attribute[:count] = 1
+      else
+        attribute[:count] += 1
+      end
+    end
+  end
 end
 
 def apply_coupons(cart, coupons)
