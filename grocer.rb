@@ -20,9 +20,9 @@ hash = {} #result
       if product == coupon[:item] && data[:count] >= coupon[:num]
         data[:count] =  data[:count] - coupon[:num]
         if hash["#{product} W/COUPON"]
-          result["#{product} W/COUPON"][:count] += 1
+          hash["#{product} W/COUPON"][:count] += 1
         else
-          result["#{product} W/COUPON"] = {:price => coupon[:cost], :clearance => data[:clearance], :count => 1}
+          hash["#{product} W/COUPON"] = {:price => coupon[:cost], :clearance => data[:clearance], :count => 1}
         end
       end
     end
