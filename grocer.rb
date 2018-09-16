@@ -1,9 +1,10 @@
 def consolidate_cart(cart)
 hash = {}
-  cart.each do |item, data|
-    hash = data
-  end
-  puts hash
+cart.each_with_index do |item, i|
+end
+puts cart.flatten
+end
+  
 end
 
 def apply_coupons(cart, coupons)
