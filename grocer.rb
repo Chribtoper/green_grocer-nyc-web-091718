@@ -54,8 +54,8 @@ cart = apply_coupons(cart, coupons)
 cart = apply_clearance(cart)
 
 cart.each do |product, attribute|
-    total += attribute[:price] * attribute[:count]
+    cart_total += attribute[:price] * attribute[:count]
   end
-total > 100.00 ? total * discount : total
+cart_total > 100.00 ? cart_total * discount : total
 
 end
