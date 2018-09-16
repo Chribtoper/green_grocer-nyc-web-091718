@@ -1,6 +1,7 @@
 def consolidate_cart(cart)
-  cart.collect do |item, data|
-    data.collect do |attribute, value|
+hash = {}
+  cart.each do |item, data|
+    data.each do |attribute, value|
       if attribute[:count].nil?
         attribute[:count] = 1
       else
