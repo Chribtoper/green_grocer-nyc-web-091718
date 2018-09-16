@@ -16,9 +16,11 @@ end
 def apply_coupons(cart, coupons)
 hash = {}
   cart.each do |product, data|
-
+    hash[product] = data
+    if product == coupons[:item]
+      hash[product] = data
+    end
   end
-  puts coupons
 end
 
 def apply_clearance(cart)
