@@ -4,7 +4,7 @@ cart.each_with_index do |item, i|
 end
 puts cart.flatten
 end
-  
+
 end
 
 def apply_coupons(cart, coupons)
