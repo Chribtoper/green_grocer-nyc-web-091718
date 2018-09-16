@@ -25,6 +25,7 @@ hash = {}
       hash[coupon][:count] = coupons[:num]
     end
   end
+  hash
 end
 
 def apply_clearance(cart)
