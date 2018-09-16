@@ -26,7 +26,7 @@ hash = {} #result
         end
       end
     end
-    hash[product] = info
+    hash[product] = data
   end
   hash
 end
