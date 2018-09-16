@@ -3,10 +3,10 @@ hash = {}
   cart.each_with_index do |item, i|
     item.each do |product, data|
       if hash[product].nil?
-        hash[product][:count] += 1
-      else
         hash[product] = data
         hash[product][:count] = 1
+      else
+        hash[product][:count] += 1
       end
     end
   hash
