@@ -1,15 +1,8 @@
 def consolidate_cart(cart)
 hash = {}
   cart.each do |item, data|
-    data.each do |attribute, value|
-      if hash[attribute].nil?
-        hash[attribute][:count] = 1
-      else
-        hash[attribute][:count] += 1
-      end
-    end
+    puts data
   end
-  hash
 end
 
 def apply_coupons(cart, coupons)
