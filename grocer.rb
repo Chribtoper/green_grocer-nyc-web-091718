@@ -19,6 +19,10 @@ hash = {}
     hash[product] = data
     if product == coupons[:item]
       hash[product][:count] -= coupons[:num]
+      coupon = "#{product} W/COUPON"
+      hash[coupon][:price] = coupons[:cost]
+      hash[coupon][:clearance] = true
+      hash[coupon][:count] = coupons[:num]
     end
   end
 end
