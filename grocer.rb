@@ -14,7 +14,11 @@ hash = {}
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+hash = {}
+  cart.each do |product, data|
+
+  end
+  puts coupons
 end
 
 def apply_clearance(cart)
